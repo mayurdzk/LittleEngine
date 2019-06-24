@@ -93,9 +93,6 @@
     <ClInclude Include="Core\OS.h">
       <Filter>Core</Filter>
     </ClInclude>
-    <ClInclude Include="Core\FileLogger.h">
-      <Filter>Core</Filter>
-    </ClInclude>
     <ClInclude Include="Core\Matrix3.h">
       <Filter>Core</Filter>
     </ClInclude>
@@ -165,9 +162,6 @@
       <Filter>Core\Jobs</Filter>
     </ClCompile>
     <ClCompile Include="Core\OS.cpp">
-      <Filter>Core</Filter>
-    </ClCompile>
-    <ClCompile Include="Core\FileLogger.cpp">
       <Filter>Core</Filter>
     </ClCompile>
     <ClCompile Include="Core\Matrix3.cpp">

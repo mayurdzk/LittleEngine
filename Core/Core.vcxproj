@@ -90,10 +90,10 @@
     <TargetName>$(ProjectName)-$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Label="LLVM" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClangClAdditionalOptions>-Wextra </ClangClAdditionalOptions>
+    <ClangClAdditionalOptions>-Wextra -Werror=return-type</ClangClAdditionalOptions>
   </PropertyGroup>
   <PropertyGroup Label="LLVM" Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
-    <ClangClAdditionalOptions>-Wextra </ClangClAdditionalOptions>
+    <ClangClAdditionalOptions>-Wextra -Werror=return-type</ClangClAdditionalOptions>
   </PropertyGroup>
   <PropertyGroup Label="LLVM" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClangClAdditionalOptions>-Wextra -Werror</ClangClAdditionalOptions>
@@ -181,14 +181,10 @@
     <ProjectReference Include="..\PCH\_PCH.vcxproj">
       <Project>{176489df-3f22-43d5-a6f4-56ef4f2d4388}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\ThirdParty\PhysicsFS\PhysicsFS.vcxproj">
-      <Project>{f6d2e7c5-26aa-410b-b5b8-51bc24d2a1c9}</Project>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\ArchiveReader.h" />
     <ClInclude Include="Core\Asserts.h" />
-    <ClInclude Include="Core\FileLogger.h" />
     <ClInclude Include="Core\CircularVector.h" />
     <ClInclude Include="Core\Core.h" />
     <ClInclude Include="Core\CoreTypes.h" />
@@ -221,7 +217,6 @@
   <ItemGroup>
     <ClCompile Include="Core\ArchiveReader.cpp" />
     <ClCompile Include="Core\Asserts.cpp" />
-    <ClCompile Include="Core\FileLogger.cpp" />
     <ClCompile Include="Core\FileRW.cpp" />
     <ClCompile Include="Core\Fixed.cpp" />
     <ClCompile Include="Core\GData.cpp" />

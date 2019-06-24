@@ -23,7 +23,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PhysicsFS", "ThirdParty\Phy
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LittleEngine", "LittleEngine\LittleEngine.vcxproj", "{FB4A4DAC-CA32-49B6-A32E-FD2654ABF5A9}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LEGame", "LEGame\LEGame.vcxproj", "{B4DAE8FA-8724-411F-A0A5-D1C3FDFADB85}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LEGameModel", "LEGameModel\LEGameModel.vcxproj", "{B4DAE8FA-8724-411F-A0A5-D1C3FDFADB85}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LEGameFramework", "LEGameFramework\LEGameFramework.vcxproj", "{6CA0C60C-BF79-4714-B09A-F788764230AB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LEGameCode", "LEGameCode\LEGameCode.vcxproj", "{22F24517-EB36-4194-8771-58A7F23250BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -89,6 +93,22 @@ Global
 		{B4DAE8FA-8724-411F-A0A5-D1C3FDFADB85}.Release|x64.Build.0 = Release|x64
 		{B4DAE8FA-8724-411F-A0A5-D1C3FDFADB85}.Ship|x64.ActiveCfg = Ship|x64
 		{B4DAE8FA-8724-411F-A0A5-D1C3FDFADB85}.Ship|x64.Build.0 = Ship|x64
+		{6CA0C60C-BF79-4714-B09A-F788764230AB}.Debug|x64.ActiveCfg = Debug|x64
+		{6CA0C60C-BF79-4714-B09A-F788764230AB}.Debug|x64.Build.0 = Debug|x64
+		{6CA0C60C-BF79-4714-B09A-F788764230AB}.Development|x64.ActiveCfg = Development|x64
+		{6CA0C60C-BF79-4714-B09A-F788764230AB}.Development|x64.Build.0 = Development|x64
+		{6CA0C60C-BF79-4714-B09A-F788764230AB}.Release|x64.ActiveCfg = Release|x64
+		{6CA0C60C-BF79-4714-B09A-F788764230AB}.Release|x64.Build.0 = Release|x64
+		{6CA0C60C-BF79-4714-B09A-F788764230AB}.Ship|x64.ActiveCfg = Ship|x64
+		{6CA0C60C-BF79-4714-B09A-F788764230AB}.Ship|x64.Build.0 = Ship|x64
+		{22F24517-EB36-4194-8771-58A7F23250BF}.Debug|x64.ActiveCfg = Debug|x64
+		{22F24517-EB36-4194-8771-58A7F23250BF}.Debug|x64.Build.0 = Debug|x64
+		{22F24517-EB36-4194-8771-58A7F23250BF}.Development|x64.ActiveCfg = Development|x64
+		{22F24517-EB36-4194-8771-58A7F23250BF}.Development|x64.Build.0 = Development|x64
+		{22F24517-EB36-4194-8771-58A7F23250BF}.Release|x64.ActiveCfg = Release|x64
+		{22F24517-EB36-4194-8771-58A7F23250BF}.Release|x64.Build.0 = Release|x64
+		{22F24517-EB36-4194-8771-58A7F23250BF}.Ship|x64.ActiveCfg = Ship|x64
+		{22F24517-EB36-4194-8771-58A7F23250BF}.Ship|x64.Build.0 = Ship|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

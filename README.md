@@ -33,6 +33,8 @@ Config | CRT | DEBUGGING | SHIPPING | Optimisation | Disk Assets
 **Release**     | MSVCRT    | True  | True      | O2    |   False
 **Ship**        | MSVCRT    | False | True      | O2    |   False
 
+>*Note: ThirdParty libraries will be built as Debug/Release according to the CRT being linked with.*
+
 ### Asset Management
 Before activating `World 0`, the Engine first loads assets into memory.
 
@@ -43,12 +45,12 @@ The Engine needs an `AssetManifest` serialised `GData` object in order to locate
 >*Expect warning logs and potential hitches on calling `Load<T>` for assets not present in `Manifest.amf`.*
 
 ### Running the Engine
-1. Add gameplay code files to "LEGame/Gameplay/", including at least one `World` derived class ("world 0").
-1. Add any new world headers to "LEGame/Gameplay/Worlds.h".
+1. Add gameplay code files to "LEGameCode/", including at least one `World` derived class ("world 0").
+1. Add new world class definition headers to "LEGameCode/Worlds.h".
 1. Add at least one world via `CreateWorld<T>` / `CreateWorlds<T>` in `GameInit::CreateWorlds()`.
-1. Load any shaders via `ShaderRepository::LoadShader<T>` in `GameInit::LoadShaders()`.
+1. Add any shaders to load via `ShaderRepository::LoadShader<T>` in `GameInit::LoadShaders()`.
 
->*Note: Ensure to set the working directory for the application project (`LittleGame`) as `$(ProjectDir)/Runtime`, to debug/run from the IDE.*
+>*Note: Ensure to set the working directory for the application project (`LEApp`) as `$(ProjectDir)/Runtime`, to debug/run from the IDE.*
 
 An active `World` will always have an instance of `GameManager` available through `g_pGameManager`, which is capable of spawning new `Entity`s and its subclasses, as well as new `AComponent` subclasses, attached to existing `Entity`s. All the base gameplay classes have a `Super` typedef. The Engine will call `World::Tick(Time dt)` at a fixed time slice, set in `GameConfig`. `World` will then call `Entity::Tick()` and `Component::Tick()` on all active objects. Derived `World`s can execute code on either side of their call to `World::Tick()` / `Super::Tick()` in case of overrides.
 
@@ -56,7 +58,7 @@ An active `World` will always have an instance of `GameManager` available throug
 
 At the end of each gameplay frame, `FinishFrame()` will cause the game state of all primitives to be copied into their corresponding render states for the renderer to interpolate between until the next swap.
 
-There are several existing Entities, Components, UI Widgets and UI Contexts ready for use in "LEGame/Framework/UI".
+There are several existing Entities, Components, UI Widgets and UI Contexts ready for use in `LEGameFramework`.
 
 ### Solution Structure
 
@@ -67,8 +69,10 @@ There are several existing Entities, Components, UI Widgets and UI Contexts read
 **Core**            | Core structures and utilities used by all projects
 **SFMLAPI**         | Wrapper classes for and implementations of SFML libraries
 **LittleEngine**    | All Engine code: Context, Audio, Input, Physics, Renderer, Repository, etc.
-**LEGame**          | All Gameplay code: World, Entity, Component, World, UI, Framework, etc. Add Worlds and scripts here.
-**LEApp**           | Game Loop
+**LEGameModel**     | The core gameplay model for `World` and `UI`.
+**LEGameFramework** | Gameplay framework: derived entities, components, UI classes, etc. 
+**LEGameCode**      | Derived worlds and game initialisation. Add custom game code here.
+**LEApp**           | Game Loop and `main()`.
 
 ## Misc
 
@@ -94,6 +98,8 @@ There are several existing Entities, Components, UI Widgets and UI Contexts read
 - [x] Asset Cooker tool
 - [x] Application Packager tool
 - [x] Containerised UI layout via files
+- [x] Matrix transformations
+- [x] Joystick and mouse support
 - [ ] Animation system
 - [ ] Collision Resolution
 
@@ -105,8 +111,10 @@ There are several existing Entities, Components, UI Widgets and UI Contexts read
     1. Set up `./Core` that references both the above
     1. Set up `./SFMLAPI` that references `Core`
     1. Set up `./LittleEngine` that references `SFMLAPI`
-    1. Set up `./LEGame` that references `LittleEngine`
-    1. Set up `./LEApp` as a 64-bit application that references `LEGame`
+    1. Set up `./LEGameModel` that references `LittleEngine`
+    1. Set up `./LEGameFramework` that references `LEGameModel`
+    1. Set up `./LEGameCode` that references `LEGameFramework`
+    1. Set up `./LEApp` as a 64-bit application that references `LEGameCode`
     1. Add all leaf directories in `./Libraries/...` to the linker's library search paths
     1. Set up any/all of `Debug`, `Development`, `Release`, `Ship` build configurations as outlined [above](#solution-structure)
     1. All pre-processor macros and external `.lib`s that any code files reference are defined / `#pragma`d in source code itself, and need not be defined/added at the project level

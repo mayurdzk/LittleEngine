@@ -148,10 +148,10 @@
     <TargetName>$(ProjectName)-$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Label="LLVM" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClangClAdditionalOptions>-Wextra</ClangClAdditionalOptions>
+    <ClangClAdditionalOptions>-Wextra -Werror=return-type</ClangClAdditionalOptions>
   </PropertyGroup>
   <PropertyGroup Label="LLVM" Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
-    <ClangClAdditionalOptions>-Wextra</ClangClAdditionalOptions>
+    <ClangClAdditionalOptions>-Wextra -Werror=return-type</ClangClAdditionalOptions>
   </PropertyGroup>
   <PropertyGroup Label="LLVM" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClangClAdditionalOptions>-Wextra -Werror</ClangClAdditionalOptions>

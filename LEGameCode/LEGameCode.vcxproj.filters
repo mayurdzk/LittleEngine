@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="LEGameCode">
+      <UniqueIdentifier>{17637a1e-a413-4b8e-809a-eb9dafa059dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LEGameCode\Worlds">
+      <UniqueIdentifier>{f3ca5403-029c-4be0-87e3-7f9d957adaf3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LEGameCode\GameInit.cpp">
+      <Filter>LEGameCode</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameCode\Worlds\BootWorld.cpp">
+      <Filter>LEGameCode\Worlds</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameCode\Worlds\TestWorld.cpp">
+      <Filter>LEGameCode\Worlds</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LEGameCode\GameInit.h">
+      <Filter>LEGameCode</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameCode\Worlds.h">
+      <Filter>LEGameCode</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameCode\Worlds\BootWorld.h">
+      <Filter>LEGameCode\Worlds</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameCode\Worlds\TestWorld.h">
+      <Filter>LEGameCode\Worlds</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

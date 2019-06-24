@@ -1,13 +1,13 @@
 #include "stdafx.h"
 #include "Core/Logger.h"
-#include "Core/FileLogger.h"
 #include "LittleEngine/FatalEngineException.h"
 #include "LittleEngine/Debug/Profiler.h"
-#include "LEGame/Model/GameConfig.h"
-#include "LEGame/Model/World/WorldClock.h"
-#include "LEGame/GameFramework.h"
-#include "LEGame/Utility/Debug/Console/DebugConsole.h"
-#include "LEGame/Utility/Debug/DebugProfiler.h"
+#include "LEGameModel/GameConfig.h"
+#include "LEGameModel/World/WorldClock.h"
+#include "LEGameFramework/Framework.h"
+#include "LEGameFramework/Utility/Debug/Console/DebugConsole.h"
+#include "LEGameFramework/Utility/Debug/DebugProfiler.h"
+#include "LEGameCode/GameInit.h"
 #include "GameLoop.h"
 
 namespace LittleEngine
@@ -20,7 +20,6 @@ using namespace Core;
 using namespace LittleEngine;
 
 // Globals
-UPtr<FileLogger> uFileLogger;
 UPtr<LERepository> uRepository;
 UPtr<LEShaders> uShaders;
 UPtr<LEAudio> uAudio;
@@ -29,7 +28,8 @@ UPtr<LEAudio> uAudio;
 GameConfig config;
 UPtr<LEContext> uContext;
 UPtr<WorldStateMachine> uWSM;
-Vector2 cullBounds;
+
+// Game Loop
 Time tickRate;
 Time maxFrameTime;
 bool bPauseOnFocusLoss = false;
@@ -87,7 +87,7 @@ bool Init(s32 argc, char** argv)
 		String header = "Game: " + GameConfig::GetGameVersion().ToString() +
 						" Engine : " + GameConfig::GetEngineVersion().ToString();
 		u8 backupCount = config.GetBackupLogFileCount();
-		uFileLogger = MakeUnique<Core::FileLogger>("Debug", backupCount, std::move(header));
+		Core::StartFileLogging("Debug", backupCount, std::move(header));
 	}
 
 	if (bRenderThread)
@@ -107,10 +107,8 @@ bool Init(s32 argc, char** argv)
 #if DEBUGGING
 	Collider::s_debugShapeWidth = config.GetColliderBorderWidth();
 #endif
-	Vector2 viewSize = config.GetViewSize();
 	tickRate = config.GetTickRate();
 	maxFrameTime = config.GetMaxFrameTime();
-	cullBounds = pSettings->GetCullBounds(viewSize);
 
 	uShaders = MakeUnique<LEShaders>();
 
@@ -218,7 +216,7 @@ void Cleanup()
 #endif
 	Core::Jobs::Cleanup();
 	LOG_I("[GameLoop] Terminated");
-	uFileLogger = nullptr;
+	Core::StopFileLogging();
 }
 } // namespace
 
@@ -240,7 +238,7 @@ s32 GameLoop::Run(s32 argc, char** argv)
 	Profiler::Init(*uContext, Time::Milliseconds(10));
 #endif
 	WorldClock::Reset();
-	uWSM->Start("Manifest.amf", "Texts/Game.style");
+	uWSM->Start("Manifest.amf", "Texts/Game.style", &GameInit::LoadShaders);
 
 	Time t;
 	Time accumulator;

@@ -36,4 +36,7 @@ void Log(LogSeverity severity, const char* pText, ...);
 
 String ParseLogSeverity(LogSeverity severity);
 LogSeverity ParseLogSeverity(const String& serialised);
+
+void StartFileLogging(String path, u8 backupCount, String header);
+void StopFileLogging();
 } // namespace Core

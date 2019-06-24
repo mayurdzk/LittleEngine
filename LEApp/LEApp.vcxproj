@@ -30,12 +30,12 @@
     <ResourceCompile Include="LEApp\Resources\LEApp.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\LEGame\LEGame.vcxproj">
-      <Project>{b4dae8fa-8724-411f-a0a5-d1c3fdfadb85}</Project>
-    </ProjectReference>
+    <Image Include="LEApp\Resources\Icon.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="LEApp\Resources\Icon.ico" />
+    <ProjectReference Include="..\LEGameCode\LEGameCode.vcxproj">
+      <Project>{22f24517-eb36-4194-8771-58a7f23250bf}</Project>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -110,10 +110,10 @@
     <TargetName>LEDemo</TargetName>
   </PropertyGroup>
   <PropertyGroup Label="LLVM" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClangClAdditionalOptions>-Wextra</ClangClAdditionalOptions>
+    <ClangClAdditionalOptions>-Wextra -Werror=return-type</ClangClAdditionalOptions>
   </PropertyGroup>
   <PropertyGroup Label="LLVM" Condition="'$(Configuration)|$(Platform)'=='Development|x64'">
-    <ClangClAdditionalOptions>-Wextra</ClangClAdditionalOptions>
+    <ClangClAdditionalOptions>-Wextra -Werror=return-type</ClangClAdditionalOptions>
   </PropertyGroup>
   <PropertyGroup Label="LLVM" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClangClAdditionalOptions>-Wextra -Werror</ClangClAdditionalOptions>
@@ -129,7 +129,7 @@
       <ConformanceMode>true</ConformanceMode>
       <SupportJustMyCode>false</SupportJustMyCode>
       <PreprocessorDefinitions>_UNICODE;UNICODE;%(PreprocessorDefinitions);SFML_STATIC;DEBUG</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\ThirdParty\Include;..\PCH;..\Core;..\SFMLAPI;..\LittleEngine;..\LEGame.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\ThirdParty\Include;..\PCH;..\Core;..\SFMLAPI;..\LittleEngine;..\LEGameModel;..\LEGameFramework;..\LEGameCode;.</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <MinimalRebuild>true</MinimalRebuild>
     </ClCompile>
@@ -149,7 +149,7 @@
       <SupportJustMyCode>false</SupportJustMyCode>
       <WholeProgramOptimization>false</WholeProgramOptimization>
       <PreprocessorDefinitions>_UNICODE;UNICODE;%(PreprocessorDefinitions);SFML_STATIC;DEBUG</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\ThirdParty\Include;..\PCH;..\Core;..\SFMLAPI;..\LittleEngine;..\LEGame.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\ThirdParty\Include;..\PCH;..\Core;..\SFMLAPI;..\LittleEngine;..\LEGameModel;..\LEGameFramework;..\LEGameCode;.</AdditionalIncludeDirectories>
       <AdditionalOptions>/Zo %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
@@ -171,7 +171,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_UNICODE;UNICODE;%(PreprocessorDefinitions);SFML_STATIC;DEBUG;SHIP</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\ThirdParty\Include;..\PCH;..\Core;..\SFMLAPI;..\LittleEngine;..\LEGame.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\ThirdParty\Include;..\PCH;..\Core;..\SFMLAPI;..\LittleEngine;..\LEGameModel;..\LEGameFramework;..\LEGameCode;.</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <MinimalRebuild>true</MinimalRebuild>
@@ -194,7 +194,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <PreprocessorDefinitions>_UNICODE;UNICODE;%(PreprocessorDefinitions);SFML_STATIC;SHIP</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\ThirdParty\Include;..\PCH;..\Core;..\SFMLAPI;..\LittleEngine;..\LEGame.</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\ThirdParty\Include;..\PCH;..\Core;..\SFMLAPI;..\LittleEngine;..\LEGameModel;..\LEGameFramework;..\LEGameCode;.</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <MinimalRebuild>true</MinimalRebuild>

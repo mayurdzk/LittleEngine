@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="LEGameFramework">
+      <UniqueIdentifier>{83328fae-c833-43b5-ace6-bc185c5e5ba5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LEGameFramework\Components">
+      <UniqueIdentifier>{9a316fc2-31a7-4b3e-af91-ae06505e1123}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LEGameFramework\Entities">
+      <UniqueIdentifier>{2b949686-b86b-4a86-8b7d-4a9211c43fb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LEGameFramework\UI">
+      <UniqueIdentifier>{5604657f-6be4-4b8a-b74e-68b83b025a61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LEGameFramework\UI\Contexts">
+      <UniqueIdentifier>{33a51a24-73c7-4e3f-b17f-e914f4c6436d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LEGameFramework\UI\Containers">
+      <UniqueIdentifier>{56fbbb39-3992-4a07-a445-f4711a2972c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LEGameFramework\UI\Elements">
+      <UniqueIdentifier>{abce7f62-c99a-43e1-9de4-f29277c7fd93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LEGameFramework\UI\Widgets">
+      <UniqueIdentifier>{bca191ea-f59c-4cf2-b1e9-56d192e76cc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LEGameFramework\Utility">
+      <UniqueIdentifier>{77b24f61-8605-4db2-a62e-dda49624d488}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LEGameFramework\Utility\Debug">
+      <UniqueIdentifier>{84e64e98-051d-44cf-8519-2f99a35e1313}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LEGameFramework\Utility\ParticleSystem">
+      <UniqueIdentifier>{e8e79fa6-ef50-44e8-82e7-a2ad9114f9e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LEGameFramework\Utility\Debug\Console">
+      <UniqueIdentifier>{608aa5d0-3018-47db-888d-6e1d1f589ea8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LEGameFramework\Components\CollisionComponent.cpp">
+      <Filter>LEGameFramework\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\Components\ControllerComponent.cpp">
+      <Filter>LEGameFramework\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\Components\RenderComponent.cpp">
+      <Filter>LEGameFramework\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\Entities\ParticleSystem.cpp">
+      <Filter>LEGameFramework\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\Entities\Player.cpp">
+      <Filter>LEGameFramework\Entities</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\UI\Contexts\UIButtonDrawer.cpp">
+      <Filter>LEGameFramework\UI\Contexts</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\UI\Contexts\UIDialogue.cpp">
+      <Filter>LEGameFramework\UI\Contexts</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\UI\Containers\UIContainer.cpp">
+      <Filter>LEGameFramework\UI\Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\UI\Containers\UIOptions.cpp">
+      <Filter>LEGameFramework\UI\Containers</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\UI\Elements\UIProgressBar.cpp">
+      <Filter>LEGameFramework\UI\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\UI\Widgets\UIButton.cpp">
+      <Filter>LEGameFramework\UI\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\UI\Widgets\UISelection.cpp">
+      <Filter>LEGameFramework\UI\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\UI\Widgets\UITextInput.cpp">
+      <Filter>LEGameFramework\UI\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\UI\Widgets\UIToggle.cpp">
+      <Filter>LEGameFramework\UI\Widgets</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\Utility\Debug\DebugProfiler.cpp">
+      <Filter>LEGameFramework\Utility\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\Utility\Debug\Console\ConsoleInput.cpp">
+      <Filter>LEGameFramework\Utility\Debug\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\Utility\Debug\Console\ConsoleRenderer.cpp">
+      <Filter>LEGameFramework\Utility\Debug\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\Utility\Debug\Console\DebugCommands.cpp">
+      <Filter>LEGameFramework\Utility\Debug\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\Utility\Debug\Console\DebugConsole.cpp">
+      <Filter>LEGameFramework\Utility\Debug\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\Utility\Debug\Console\LogLine.cpp">
+      <Filter>LEGameFramework\Utility\Debug\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\Utility\Debug\Console\RenderStatsRenderer.cpp">
+      <Filter>LEGameFramework\Utility\Debug\Console</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\Utility\ParticleSystem\PSData.cpp">
+      <Filter>LEGameFramework\Utility\ParticleSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="LEGameFramework\Utility\ParticleSystem\PSEmitter.cpp">
+      <Filter>LEGameFramework\Utility\ParticleSystem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LEGameFramework\Components\CollisionComponent.h">
+      <Filter>LEGameFramework\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Components\Components.h">
+      <Filter>LEGameFramework\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Components\ControllerComponent.h">
+      <Filter>LEGameFramework\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Components\RenderComponent.h">
+      <Filter>LEGameFramework\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Entities\Entities.h">
+      <Filter>LEGameFramework\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Entities\ParticleSystem.h">
+      <Filter>LEGameFramework\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Entities\Player.h">
+      <Filter>LEGameFramework\Entities</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\UI\UI.h">
+      <Filter>LEGameFramework\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\UI\Contexts\UIButtonDrawer.h">
+      <Filter>LEGameFramework\UI\Contexts</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\UI\Contexts\UIDialogue.h">
+      <Filter>LEGameFramework\UI\Contexts</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\UI\Containers\UIContainer.h">
+      <Filter>LEGameFramework\UI\Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\UI\Containers\UIOptions.h">
+      <Filter>LEGameFramework\UI\Containers</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\UI\Elements\UIProgressBar.h">
+      <Filter>LEGameFramework\UI\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\UI\Widgets\UIButton.h">
+      <Filter>LEGameFramework\UI\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\UI\Widgets\UISelection.h">
+      <Filter>LEGameFramework\UI\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\UI\Widgets\UITextInput.h">
+      <Filter>LEGameFramework\UI\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\UI\Widgets\UIToggle.h">
+      <Filter>LEGameFramework\UI\Widgets</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Framework.h">
+      <Filter>LEGameFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Utility\Debug\DebugProfiler.h">
+      <Filter>LEGameFramework\Utility\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Utility\Debug\Console\ConsoleInput.h">
+      <Filter>LEGameFramework\Utility\Debug\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Utility\Debug\Console\ConsoleRenderer.h">
+      <Filter>LEGameFramework\Utility\Debug\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Utility\Debug\Console\DebugCommands.h">
+      <Filter>LEGameFramework\Utility\Debug\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Utility\Debug\Console\DebugConsole.h">
+      <Filter>LEGameFramework\Utility\Debug\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Utility\Debug\Console\LogLine.h">
+      <Filter>LEGameFramework\Utility\Debug\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Utility\Debug\Console\RenderStatsRenderer.h">
+      <Filter>LEGameFramework\Utility\Debug\Console</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Utility\ParticleSystem\PSData.h">
+      <Filter>LEGameFramework\Utility\ParticleSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="LEGameFramework\Utility\ParticleSystem\PSEmitter.h">
+      <Filter>LEGameFramework\Utility\ParticleSystem</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

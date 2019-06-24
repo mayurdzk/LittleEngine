@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include "Core/FileLogger.h"
 #include "Core/Jobs.h"
 #include "SFMLAPI/System/Assets.h"
 #include "SFMLAPI/Viewport/Viewport.h"

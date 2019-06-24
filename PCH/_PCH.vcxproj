@@ -91,10 +91,10 @@
     <TargetName>$(ProjectName)-$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Label="LLVM" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClangClAdditionalOptions>-Wextra</ClangClAdditionalOptions>
+    <ClangClAdditionalOptions>-Wextra -Werror=return-type</ClangClAdditionalOptions>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Development|x64'" Label="LLVM">
-    <ClangClAdditionalOptions>-Wextra</ClangClAdditionalOptions>
+    <ClangClAdditionalOptions>-Wextra -Werror=return-type</ClangClAdditionalOptions>
   </PropertyGroup>
   <PropertyGroup Label="LLVM" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClangClAdditionalOptions>-Wextra -Werror</ClangClAdditionalOptions>
@@ -199,6 +199,11 @@
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(OutputPath)LittleEngine-$(Configuration).pch</PrecompiledHeaderOutputFile>
       <PrecompiledHeaderOutputFile Condition="'$(Configuration)|$(Platform)'=='Ship|x64'">$(OutputPath)LittleEngine-$(Configuration).pch</PrecompiledHeaderOutputFile>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ThirdParty\PhysicsFS\PhysicsFS.vcxproj">
+      <Project>{f6d2e7c5-26aa-410b-b5b8-51bc24d2a1c9}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

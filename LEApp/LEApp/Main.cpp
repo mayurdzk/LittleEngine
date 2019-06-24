@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "GameLoop/GameLoop.h"
-#include "LEGame/Gameplay/GameInit.h"
+#include "LEGameCode/GameInit.h"
 
 using namespace LittleEngine;
 
